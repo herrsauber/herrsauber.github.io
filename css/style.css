@@ -41,16 +41,11 @@ main {
   padding: 0px;
 }
 
-.flexbox-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
 .stairs {
   display: block;
   width: auto;
   padding: 20px;
   height: 100vh;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
