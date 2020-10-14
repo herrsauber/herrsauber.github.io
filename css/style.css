@@ -52,4 +52,5 @@ main {
   display: block;
   width: auto;
   padding: 20px;
+  height: 100vh;
 }
