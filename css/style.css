@@ -45,9 +45,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .stairs {
   display: block;
   width: auto;
+  padding: 20px;
 }
