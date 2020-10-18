@@ -48,8 +48,37 @@ main {
     border-right: none;
     padding: 1px 0px;
     margin-bottom: 6px;
-    background-color: transparent;
+    background-color: #efefea;
     width:200px;
+}
+
+.newsletter-input:focus {
+  border-bottom: 1px solid #000;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.newsletter-submit {
+  padding: 4px 11px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    -moz-transition: all .1s ease;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    transition: all .1s ease-in;
+}
+
+.newsletter-submit:hover {
+  background-color:transparent;
+  border: 1px solid #000;
+  color: #000;
 }
 
 .stairs {
@@ -60,4 +89,29 @@ main {
   max-height: 100vh;
   box-sizing: border-box;
   margin: 0 auto;
+}
+
+.cursor {
+	position: relative;
+}
+.cursor	i {
+  position: absolute;
+      width: 1px;
+      height: 60%;
+      background-color: gray;
+      left: 0px;
+      top: 0%;
+      animation-name: blink;
+      animation-duration: 800ms;
+      animation-iteration-count: infinite;
+      opacity: 1;
+}
+
+.cursor input:focus + i {
+	display: none;
+}
+
+@keyframes blink {
+	from { opacity: 1; }
+	to { opacity: 0; }
 }
