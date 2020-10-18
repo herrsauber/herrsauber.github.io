@@ -41,6 +41,17 @@ main {
   padding: 0px;
 }
 
+.newsletter-input {
+  border-bottom: 1px solid #000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 1px 0px;
+    margin-bottom: 6px;
+    background-color: transparent;
+    width:200px;
+}
+
 .stairs {
   display: block;
   width: auto;
