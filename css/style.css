@@ -95,7 +95,7 @@ main {
 
 .newsletter-input {
   border: none;
-    padding: 1px 0px;
+    padding: 1px 0px 1px 12px;
     margin-bottom: 6px;
     background-color: #fff;
     border-radius: 20px;
@@ -202,7 +202,7 @@ main {
       left: 12px;
       top: 10%;
       animation-name: blink;
-      animation-duration: 800ms;
+      animation-duration: 1000ms;
       animation-iteration-count: infinite;
       opacity: 1;
 }
