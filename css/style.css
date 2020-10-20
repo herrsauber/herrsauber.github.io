@@ -16,6 +16,8 @@
     box-sizing: border-box;
 }
 
+textarea, select, input, button { outline: none; }
+
 html {
   font-family: sans-serif;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -41,22 +43,55 @@ main {
   padding: 0px;
 }
 
+.link {
+  margin-top: 16px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #000;
+  -moz-transition: all .1s ease;
+  -webkit-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  transition: all .1s ease-in;
+}
+
+.link:hover {
+  color: #000;
+  border: 1px solid #000;
+  background: transparent;
+}
+
+.main-text {
+  max-width: 600px;
+  font-size: 60px;
+  line-height: 66px;
+  padding-top: 20px;
+  letter-spacing: -0.02em;
+}
+
+
+.numbers {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
 .newsletter-input {
-  border-bottom: 1px solid #000;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+  border: none;
     padding: 1px 0px;
     margin-bottom: 6px;
-    background-color: #efefea;
-    width:200px;
+    background-color: #fff;
+    border-radius: 20px;
+    outline: none;
+    width: 180px;
+    line-height: 22px;
 }
 
 .newsletter-input:focus {
-  border-bottom: 1px solid #000;
-  border-top: none;
-  border-left: none;
-  border-right: none;
   outline: none;
   background-color: #fff;
 }
@@ -66,7 +101,7 @@ main {
     border-radius: 15px;
     border: 1px solid #000;
     background-color: #000;
-    color: #fff;
+    color: #efefea;
     cursor: pointer;
     -moz-transition: all .1s ease;
     -webkit-transition: all .1s ease;
@@ -81,26 +116,77 @@ main {
   color: #000;
 }
 
-.stairs {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  padding: 20px;
-  max-height: 100vh;
+.second-block-wrapper {
+ padding: 0px;
+}
+
+.second-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
   box-sizing: border-box;
-  margin: 0 auto;
+}
+
+.line {
+  margin: 0 40px;
+  height: 1px;
+  background-color: #000;
+}
+
+.second-block-cell {
+  grid-column: span 1;
+  -moz-transition: all .1s ease;
+  -webkit-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  transition: all .1s ease-in;
+}
+
+.second-block-cell:hover {
+  color: #38653c;
+}
+
+.second-block-cell:hover .button, .second-block-cell:hover .link {
+  background-color: #38653c;
+  border: 1px solid #38653c;
+}
+
+.second-block-cell:hover .button:hover, .second-block-cell:hover .link:hover {
+  color: #38653c;
+  background-color: transparent;
+  border: 1px solid #38653c;
+}
+
+.second-block-cell:hover .button:active, .second-block-cell:hover .link:active {
+  color: #efefea;
+  background-color: #000;
+}
+
+.second-block-cell-inner {
+  font-size: 12px;
+  border-right: 1px solid #000;
+  margin-top: 40px;
+  min-height: 180px;
+  padding-left: 40px;
+  padding-right: 40px;
+  -moz-transition: all .1s ease;
+  -webkit-transition: all .1s ease;
+  -o-transition: all .1s ease;
+  -ms-transition: all .1s ease;
+  transition: all .1s ease-in;
 }
 
 .cursor {
 	position: relative;
 }
+
 .cursor	i {
   position: absolute;
       width: 1px;
       height: 60%;
       background-color: gray;
-      left: 0px;
-      top: 0%;
+      left: 12px;
+      top: 10%;
       animation-name: blink;
       animation-duration: 800ms;
       animation-iteration-count: infinite;
@@ -114,4 +200,28 @@ main {
 @keyframes blink {
 	from { opacity: 1; }
 	to { opacity: 0; }
+}
+
+@media (max-width: 800px) {
+  .second-block-cell {
+    grid-column: span 3;
+    padding: 0 40px;
+  }
+  .second-block-cell-inner {
+    border-right: 0px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 0px;
+    min-height: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-text {
+    font-size: 40px;
+    font-size: 35px;
+    line-height: 43px;
+    max-width: 80%;
+  }
 }
