@@ -6,12 +6,38 @@
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/fastclick.js"></script>
 
   <title>Dasswerke</title>
   <meta name="description" content="Get to work. Est. 2020." />
   <meta name="keywords" content="Dasswerke, office, workplace, office, office chair, architecture, pens, clothing, chair, design, instagram">
   <meta name="author" content="Dasswerke">
+
+  <script type="text/javascript">
+       $(window).load(function(){
+      setTimeout(function(){
+          $('.first-block').addClass("visible");
+        }, 3500);
+    });
+  </script>
+
+  <script>
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 50) {
+        $('.first-block').addClass('hide');
+        $('.line').addClass('hide');
+        $('.second-block').addClass('hide');
+      }
+    	else{
+        $('.first-block').removeClass('hide');
+        $('.line').removeClass('hide');
+        $('.second-block').removeClass('hide');
+      }
+  });
+  </script>
 </head>
 
 <body>
@@ -103,8 +129,9 @@
 
     </div>
 
-
-    <iframe width="100%" height="1700px" src = "https://dasswerke.tumblr.com/" frameborder="0"></ iframe>
+<!--
+    <iframe width="100%" height="1700px" class="iframe-tumblr" src = "https://dasswerke.tumblr.com/" frameborder="0"></ iframe>
+-->
 
     <footer>
       &#169; Dasswerke 2020
@@ -113,12 +140,6 @@
   </main>
 </body>
 
-<script type="text/javascript">
-     $(window).load(function(){
-    setTimeout(function(){
-        $('.index-update').addClass("visible");
-      }, 3500);
-  });
-</script>
+
 
 </html>

@@ -49,11 +49,23 @@ main {
 
 .heading {
   padding: 36px 40px 80px 40px;
+  background-color: #efefea;
+  -moz-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .first-block {
   padding: 36px 40px 80px 40px;
   font-size: 12px;
+  background-color: #efefea;
+  -moz-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .link {
@@ -139,6 +151,12 @@ main {
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   box-sizing: border-box;
+  background-color: #efefea;
+  -moz-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .line {
@@ -211,6 +229,22 @@ main {
 	display: none;
 }
 
+.iframe-tumblr {
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  margin-top: 100vh;
+}
+
+.shrink {
+  margin-top: 0px;
+  -moz-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
 footer {
   font-size: 9px;
   color: #000;
@@ -219,6 +253,16 @@ footer {
   text-align: right;
   box-sizing: border-box;
   border-top: 1px solid #000;
+}
+
+.hide {
+  opacity: 0!important;
+  visibility: hidden!important;
+  -moz-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 @keyframes blink {
@@ -269,7 +313,6 @@ footer {
   .line {
     margin: 0 24px;
   }
-
   footer {
     margin: 100px 24px 0 24px;
   }
