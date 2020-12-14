@@ -289,6 +289,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .newsletter-submit, input[type=button], input[type=submit], input[type=reset] {
+    width: 100%;
+  }
+
   .dasswerke-logo {
     width: 104px;
   }
