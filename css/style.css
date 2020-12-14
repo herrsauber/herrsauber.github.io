@@ -291,6 +291,8 @@ footer {
 @media (max-width: 600px) {
   .newsletter-submit, input[type=button], input[type=submit], input[type=reset] {
     width: 100%;
+    padding: 14px 16px;
+    border-radius: 34px;
   }
 
   .newsletter-input {
@@ -299,15 +301,21 @@ footer {
 
   .link {
     width: 100%;
+    padding: 14px 16px;
+    border-radius: 34px;
+  }
+
+  .second-block-cell-inner {
+    font-size: 10px;
+    line-height: 14px;
   }
 
   .dasswerke-logo {
     width: 104px;
   }
   .main-text {
-    font-size: 40px;
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 26px;
     max-width: 80%;
   }
   .heading {
