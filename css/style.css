@@ -293,9 +293,9 @@ footer {
 
 @media (max-width: 600px) {
   .cursor	i {
-        height: 6px;
-        left: 14px;
-        top: 10%;
+    height: 16px;
+    left: 12px;
+    top: 12px;
   }
 
   .newsletter-submit, input[type=button], input[type=submit], input[type=reset] {
