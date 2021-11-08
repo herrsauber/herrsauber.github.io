@@ -220,15 +220,15 @@ main {
 
 .cursor	i {
   position: absolute;
-      width: 1px;
-      height: 60%;
-      background-color: gray;
-      left: 12px;
-      top: 10%;
-      animation-name: blink;
-      animation-duration: 1000ms;
-      animation-iteration-count: infinite;
-      opacity: 1;
+  width: 1px;
+  height: 14px;
+  background-color: gray;
+  left: 12px;
+  top: 5px;
+  animation-name: blink;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  opacity: 1;
 }
 
 .cursor input:focus + i {
