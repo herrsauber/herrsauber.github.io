@@ -40,6 +40,18 @@
         height: auto;
         padding: 40px;
     }
+    .story-header-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #efefea;
+      -moz-transition: all .3s ease;
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      -ms-transition: all .3s ease;
+      transition: all .3s ease;
+    }
   </style>
 
 </head>
@@ -77,7 +89,10 @@
       </div>
     </div>
 
-    <img class="story-header-image" src="https://kimbellart.org/sites/default/files/styles/hero_image/public/2019-01/archtecture_kahn_LouiseKahn.jpg?itok=C5J-jEx1">
+    <div class="story-header-grid">
+      Louis Kahn
+      <img class="story-header-image" src="https://kimbellart.org/sites/default/files/styles/hero_image/public/2019-01/archtecture_kahn_LouiseKahn.jpg?itok=C5J-jEx1">
+    </div>
 
     <footer>
       &#169; Dasswerke 2021
