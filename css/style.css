@@ -178,18 +178,18 @@ main {
 }
 
 .second-block-cell:hover {
-  color: #88aece;
+  color: #745a32;
 }
 
 .second-block-cell:hover .button, .second-block-cell:hover .link {
-  background-color: #88aece;
-  border: 1px solid #88aece;
+  background-color: #745a32;
+  border: 1px solid #745a32;
 }
 
 .second-block-cell:hover .button:hover, .second-block-cell:hover .link:hover {
-  color: #88aece;
+  color: #745a32;
   background-color: transparent;
-  border: 1px solid #88aece;
+  border: 1px solid #745a32;
   font-weight: normal;
 }
 
