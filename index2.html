@@ -124,36 +124,35 @@
     </footer>
 
   </main>
+  <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            var email = document.getElementById('email').value;
+
+            fetch('submit_form.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'email=' + encodeURIComponent(email),
+            })
+            .then(response => response.json())
+            .then(data => {
+                var notification = document.getElementById('notification');
+                notification.style.display = 'block';
+                notification.textContent = data.message;
+
+                if (data.success) {
+                    notification.style.color = 'green';
+                } else {
+                    notification.style.color = 'red';
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
-
-<script>
-  document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
-
-    var email = document.getElementById('email').value;
-
-    fetch('submit_form.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: 'email=' + encodeURIComponent(email),
-    })
-    .then(response => response.json())
-    .then(data => {
-        var notification = document.getElementById('notification');
-        notification.style.display = 'block';
-        notification.textContent = data.message;
-
-        if (data.success) {
-            notification.style.color = 'green';
-        } else {
-            notification.style.color = 'red';
-        }
-    })
-    .catch(error => console.error('Error:', error));
-});
-</script>
 
 
 </html>
