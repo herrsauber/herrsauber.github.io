@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker</title>
+    <link rel="stylesheet" href="style-dasstracker.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Time Tracker</h1>
+        </header>
+        <main>
+            <div class="tracker">
+                <div id="timer">00:00:00</div>
+                <button id="start">Start</button>
+                <button id="stop" disabled>Stop</button>
+                <button id="reset" disabled>Reset</button>
+            </div>
+            <div class="tasks">
+                <h2>Project Tasks</h2>
+                <input type="text" id="task-input" placeholder="Enter task name">
+                <button id="add-task">Add Task</button>
+                <ul id="task-list"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="script-dasstracker.js"></script>
+</body>
+</html>
