@@ -86,42 +86,7 @@
               We are getting ready for our full launch. Sign up below to be the first to know when we go live.
               <br/><br/>
               Please enter email address below:
-              <form id="signup-form">
-  <label for="email">Sign up for our newsletter:</label>
-  <input type="email" id="email" name="email" required>
-  <button type="submit">Sign Up</button>
-</form>
-
-<div id="notification" style="display:none;"></div>
-
-<script>
-  document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
-
-    var email = document.getElementById('email').value;
-
-    fetch('https://script.google.com/macros/s/AKfycbx4yS7la2ighIX60OND9PUBCnjMKT9PetvH92ltbrQEuXgzhF7sJ-Js653nrHWGGOnY/exec', {
-      method: 'POST',
-      body: JSON.stringify({ email: email }),
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      var notification = document.getElementById('notification');
-      notification.style.display = 'block';
-      notification.textContent = data.message;
-
-      if (data.status === 'success') {
-        notification.style.color = 'green';
-      } else {
-        notification.style.color = 'red';
-      }
-    })
-    .catch(error => console.error('Error:', error));
-  });
-</script>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0UVLA7vThGgw7qHFWq8LsnRt-TTrCsJKKuysu5mR-xQC0fg/viewform?embedded=true" width="640" height="541" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
           </div>
       </div>
 
