@@ -41,6 +41,7 @@ html {
 
 body {
   background-color: #efefea;
+  color: #333;
   width: 100%;
   margin: 0px;
   padding: 0px;
@@ -59,6 +60,7 @@ main {
 
 .dasswerke-logo {
   width: 100px;
+  fill: #333;
 }
 
 .heading {
@@ -85,14 +87,14 @@ main {
 
 .link {
   margin-top: 16px;
-  background-color: #000;
+  background-color: #333;
   color: #fff;
   text-decoration: none;
   display: inline-block;
   padding: 6px 11px 3px;
   border-radius: 15px;
   text-align: center;
-  border: 1px solid #000;
+  border: 1px solid #333;
   -moz-transition: all .1s ease;
   -webkit-transition: all .1s ease;
   -o-transition: all .1s ease;
@@ -101,8 +103,8 @@ main {
 }
 
 .link:hover {
-  color: #000;
-  border: 1px solid #000;
+  color: #333;
+  border: 1px solid #333;
   background: transparent;
 }
 
@@ -113,6 +115,7 @@ main {
   line-height: 5.5vh; /* Adjusted line height */
   padding-top: 2vh;
   letter-spacing: -0.02em;
+  color: #333;
 }
 
 
@@ -142,8 +145,8 @@ main {
   font-family: 'Univers LT Std', Helvetica, sans-serif;
   padding: 6px 11px 3px;
     border-radius: 15px;
-    border: 1px solid #000;
-    background-color: #000;
+    border: 1px solid #333;
+    background-color: #333;
     cursor: pointer;
     -moz-transition: all .1s ease;
     -webkit-transition: all .1s ease;
@@ -156,8 +159,8 @@ main {
 
 .newsletter-submit:hover {
   background-color:transparent;
-  border: 1px solid #000;
-  color: #000;
+  border: 1px solid #333;
+  color: #333;
 }
 
 .second-block-wrapper {
@@ -186,7 +189,7 @@ main {
 .line {
   flex: 0 0 auto;
   height: 1px;
-  background-color: #000;
+  background-color: #333;
   margin: 40px 40px 0 40px;
 }
 
@@ -203,30 +206,30 @@ main {
 }
 
 .second-block-cell:hover {
-  color: #504534;
+  color: #81a6b9;
 }
 
 .second-block-cell:hover .button, .second-block-cell:hover .link {
-  background-color: #504534;
-  border: 1px solid #504534;
+  background-color: #81a6b9;
+  border: 1px solid #81a6b9;
 }
 
 .second-block-cell:hover .button:hover, .second-block-cell:hover .link:hover {
-  color: #504534;
+  color: #81a6b9;
   background-color: transparent;
-  border: 1px solid #504534;
+  border: 1px solid #81a6b9;
   font-weight: normal;
 }
 
 .second-block-cell:hover .button:active, .second-block-cell:hover .link:active {
   color: #efefea;
-  background-color: #000;
+  background-color: #333;
 }
 
 .second-block-cell-inner {
   font-size: 12px;
   width: 100%;
-  border-right: 1px solid #000;
+  border-right: 1px solid #333;
   margin-top: auto;
   margin-bottom: 40px;
   min-height: 180px;
@@ -281,12 +284,12 @@ main {
 footer {
   flex-shrink: 0;
   font-size: 9px;
-  color: #000;
+  color: #333;
   padding: 8px 0px 10px 0px;
   margin: 0 40px;
   text-align: right;
   box-sizing: border-box;
-  border-top: 1px solid #000;
+  border-top: 1px solid #333;
 }
 
 .hide {
@@ -310,8 +313,8 @@ footer {
     padding: 0 40px;
   }
   .second-block-cell-inner {
-    border-right: 0px solid #000;
-    border-bottom: 1px solid #000;
+    border-right: 0px solid #333;
+    border-bottom: 1px solid #333;
     padding: 0px;
     min-height: 10px;
     margin-top: 50px;
