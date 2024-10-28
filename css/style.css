@@ -18,11 +18,20 @@
 
 textarea, select, input, button { outline: none; }
 
+@import url('https://fonts.cdnfonts.com/css/univers-lt-std');
+
+@font-face {
+  font-family: 'UniversLTStd-Light';
+  src: url('../fonts/UniversLTStd-Light.otf') format('opentype');
+}
+
 html {
-  font-family: sans-serif;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Univers LT Std', Helvetica, sans-serif;
   font-size: 10px;
   width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   -ms-text-size-adjust: 100%;
@@ -35,20 +44,26 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-  height: 100vh;
   width: 100%;
   padding: 0px;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .dasswerke-logo {
-  width: 128px;
+  width: 100px;
 }
 
 .heading {
-  padding: 36px 40px 80px 40px;
+  height: 20vh;
+  padding: 36px 40px 20px 40px;
   background-color: #efefea;
   -moz-transition: all .3s ease;
   -webkit-transition: all .3s ease;
@@ -58,7 +73,7 @@ main {
 }
 
 .first-block {
-  padding: 36px 40px 80px 40px;
+  padding: 2vh 40px; /* Adjusted padding */
   font-size: 12px;
   background-color: #efefea;
   -moz-transition: all .3s ease;
@@ -74,7 +89,7 @@ main {
   color: #fff;
   text-decoration: none;
   display: inline-block;
-  padding: 4px 11px;
+  padding: 6px 11px 3px;
   border-radius: 15px;
   text-align: center;
   border: 1px solid #000;
@@ -92,17 +107,19 @@ main {
 }
 
 .main-text {
+  font-family: 'UniversLTStd-Light', sans-serif;
   max-width: 600px;
-  font-size: 60px;
-  line-height: 66px;
-  padding-top: 20px;
+  font-size: 5vh; /* Adjusted font size */
+  line-height: 5.5vh; /* Adjusted line height */
+  padding-top: 2vh;
   letter-spacing: -0.02em;
 }
 
 
 .numbers {
-  font-size: 20px;
-  padding-bottom: 20px;
+  font-family: 'UniversLTStd-Light';
+  font-size: 24px;
+  padding-bottom: 2vh;
 }
 
 .newsletter-input {
@@ -122,7 +139,8 @@ main {
 }
 
 .newsletter-submit, input[type=button], input[type=submit], input[type=reset] {
-  padding: 4px 11px;
+  font-family: 'Univers LT Std', Helvetica, sans-serif;
+  padding: 6px 11px 3px;
     border-radius: 15px;
     border: 1px solid #000;
     background-color: #000;
@@ -133,9 +151,6 @@ main {
     -ms-transition: all .1s ease;
     transition: all .1s ease-in;
      -webkit-appearance: none;
-     font-weight:400;
-     font-family: sans-serif;
-     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
      color: #fff;
 }
 
@@ -150,9 +165,11 @@ main {
 }
 
 .second-block {
+  flex: 0 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+   margin-top: 40px;
   box-sizing: border-box;
   background-color: #efefea;
   -moz-transition: all .3s ease;
@@ -162,14 +179,22 @@ main {
   transition: all .3s ease;
 }
 
+.first-block {
+  flex: 1 0 auto;
+}
+
 .line {
-  margin: 0 40px;
+  flex: 0 0 auto;
   height: 1px;
   background-color: #000;
+  margin: 40px 40px 0 40px;
 }
 
 .second-block-cell {
   grid-column: span 1;
+  display: flex;
+  flex-direction: column
+  justify-content: flex-end;
   -moz-transition: all .1s ease;
   -webkit-transition: all .1s ease;
   -o-transition: all .1s ease;
@@ -200,8 +225,10 @@ main {
 
 .second-block-cell-inner {
   font-size: 12px;
+  width: 100%;
   border-right: 1px solid #000;
-  margin-top: 40px;
+  margin-top: auto;
+  margin-bottom: 40px;
   min-height: 180px;
   padding-left: 40px;
   padding-right: 40px;
@@ -252,10 +279,11 @@ main {
 }
 
 footer {
+  flex-shrink: 0;
   font-size: 9px;
   color: #000;
-  padding: 8px 0px 10px 40px;
-  margin: 100px 40px 0 40px;
+  padding: 8px 0px 10px 0px;
+  margin: 0 40px;
   text-align: right;
   box-sizing: border-box;
   border-top: 1px solid #000;
@@ -286,8 +314,9 @@ footer {
     border-bottom: 1px solid #000;
     padding: 0px;
     min-height: 10px;
-    margin-top: 20px;
-    padding-bottom: 24px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
   }
   .border-fix {
     border-bottom: none;
@@ -295,6 +324,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .second-block {
+    margin-top: 0px;
+  }
   .cursor	i {
     height: 16px;
     left: 12px;
@@ -303,12 +335,11 @@ footer {
 
   .newsletter-submit, input[type=button], input[type=submit], input[type=reset] {
     width: 100%;
-    padding: 14px 16px;
+    padding: 11px 16px 9px;
     border-radius: 34px;
-    font-weight:400;
-    font-family: sans-serif;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
+    font-family: 'Univers LT Std', Helvetica, sans-serif;
+    max-width: 200px;
   }
 
   .newsletter-input {
@@ -318,31 +349,33 @@ footer {
 
   .link {
     width: 100%;
-    padding: 14px 16px;
+    padding: 11px 16px 9px;
     border-radius: 34px;
+    max-width: 200px;
   }
 
   .second-block-cell-inner {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 11px;
+    line-height: 19px;
   }
 
   .dasswerke-logo {
-    width: 104px;
+    width: 100px;
   }
   .main-text {
-    font-size: 20px;
-    line-height: 26px;
-    max-width: 80%;
+    font-size: 28px;
+    line-height: 36px;
+    max-width: 90%;
   }
   .heading {
-    padding: 36px 24px 80px 24px;
+    padding: 36px 24px 24px 24px;
+    height: 10vh;
   }
   .first-block {
     padding: 36px 24px 80px 24px;
   }
   .numbers {
-    font-size: 16px;
+    font-size: 20px;
   }
   .line, .second-block-cell {
     padding: 0 24px;
@@ -351,6 +384,6 @@ footer {
     margin: 0 24px;
   }
   footer {
-    margin: 100px 24px 0 24px;
+    margin: 0px 24px 0 24px;
   }
 }
