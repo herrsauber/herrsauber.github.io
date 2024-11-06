@@ -299,6 +299,13 @@ footer {
   transition: all .3s ease;
 }
 
+.swiper {
+  width: 100%;
+  height: calc(100vh - 60px);
+  max-height: 800px;
+  margin-bottom: 60px;
+}
+
 @keyframes blink {
 	from { opacity: 1; }
 	to { opacity: 0; }
