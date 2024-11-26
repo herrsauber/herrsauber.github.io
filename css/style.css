@@ -39,15 +39,31 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+a {
+  color: #333; /* Set your desired default link color */
+  text-decoration: none; /* Optional: removes underline */
+  transition: all 0.3s ease-in-out; /* Smooth color transition */
+}
+
+a:hover {
+  color: initial; /* Desired hover color */
+  transition: all 0.3s ease-in-out;
+}
+
+a:link,
+a:visited  {
+  text-decoration: none;
+}
+
 body {
-  background-color: #efefea;
-  color: #333;
   width: 100%;
   margin: 0px;
   padding: 0px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #efefea;
+  color: #333;
 }
 
 main {
@@ -56,6 +72,7 @@ main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+
 }
 
 .dasswerke-logo {
@@ -63,30 +80,32 @@ main {
   fill: #333;
 }
 
+.top-container {
+ display: flex;
+  flex-direction: column;
+  height: calc(100vh - 20px);
+  background-color: #efefea;
+  color: #333;
+}
+
 .heading {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   height: 20vh;
   padding: 36px 40px 20px 40px;
-  -moz-transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  -ms-transition: all .3s ease;
-  transition: all .3s ease;
 }
 
 .first-block {
-  padding: 2vh 40px; /* Adjusted padding */
+  height: 65vh;
+  padding: 2vh 40px;
   font-size: 12px;
-  -moz-transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  -ms-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .link {
   margin-top: 16px;
   background-color: #333;
-  color: #fff;
+  color: #efefea;
   text-decoration: none;
   display: inline-block;
   padding: 6px 11px 3px;
@@ -113,9 +132,23 @@ main {
   line-height: 5.5vh; /* Adjusted line height */
   padding-top: 2vh;
   letter-spacing: -0.02em;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
   color: #333;
 }
 
+.main-text-title {
+  grid-row: 1;
+}
+
+.main-text-secondary {
+  grid-row: 2;
+  align-self: center; /* Centers the element vertically in its grid row */
+ font-size: 22px;
+ line-height: 130%;
+ letter-spacing: -0.01em
+}
 
 .numbers {
   font-family: 'UniversLTStd-Light';
@@ -125,13 +158,14 @@ main {
 
 .newsletter-input {
   border: none;
+  height: 100%;
     padding: 1px 0px 1px 12px;
-    margin-bottom: 6px;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 14px;
     outline: none;
-    width: 180px;
+    width: 100%;
     line-height: 22px;
+    font-size: 4vh;
 }
 
 .newsletter-input:focus {
@@ -140,25 +174,25 @@ main {
 }
 
 .newsletter-submit, input[type=button], input[type=submit], input[type=reset] {
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
   font-family: 'Univers LT Std', Helvetica, sans-serif;
   padding: 6px 11px 3px;
-    border-radius: 15px;
-    border: 1px solid #333;
-    background-color: #333;
-    cursor: pointer;
-    -moz-transition: all .1s ease;
-    -webkit-transition: all .1s ease;
-    -o-transition: all .1s ease;
-    -ms-transition: all .1s ease;
-    transition: all .1s ease-in;
-     -webkit-appearance: none;
-     color: #fff;
+  border-radius: 14px;
+  border: 1px solid #333;
+  background-color: #333;
+  cursor: pointer;
+  transition: all .1s ease-in;
+  -webkit-appearance: none;
+  background-color: #efefea;
+  color: #333;
 }
 
-.newsletter-submit:hover {
-  background-color:transparent;
+.newsletter-submit:hover, .newsletter-submit:active {
+  background-color: #333;
   border: 1px solid #333;
-  color: #333;
+  color: #efefea;
 }
 
 .second-block-wrapper {
@@ -166,28 +200,92 @@ main {
 }
 
 .second-block {
-  flex: 0 0 auto;
   display: grid;
+  padding: 0 40px;
+  grid-template-rows: auto 1fr;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-   margin-top: 40px;
+  margin: 2vh 0 2.1vh;
+  row-gap: 2vh;
+  column-gap: 10px;
   box-sizing: border-box;
-  -moz-transition: all .3s ease;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  -ms-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-.first-block {
-  flex: 1 0 auto;
+.third-block {
+  padding: 0 40px;
+  flex: 0 0 60vh; /* Fixed height, adjust as needed */
 }
 
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4px;
+  row-gap: 40px;
+  padding: 40px;
+}
+
+.teachers-grid-cell {
+  display: block;
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  colro: initial;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+a.teachers-grid-cell:hover > .teachers-title,
+a.teachers-grid-cell:hover > .read-more,
+a.teachers-grid-cell:active > .teachers-title,
+a.teachers-grid-cell:active > .read-more {
+  color: #81a6b9;
+}
+
+a.teachers-grid-cell:visited {
+  color: initial;
+}
+
+.teachers-grid-cell img {
+  display: block;
+  width: 100%
+}
+
+.teachers-title {
+  font-weight: normal;
+  padding-top: 20px;
+  font-size: 36px;
+  letter-spacing:-0.03em;
+}
+.teachers-job {
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+.teachers-vitals {
+  font-size: 10px;
+  padding-top: 10px;
+}
+
+.teachers-grid-desc {
+  max-width: 680px; padding-top: 30px; font-size: 18px; font-family: 'UniversLTStd-Light', sans-serif;
+  line-height: 134%;
+}
+
+.read-more {
+  padding-top: 30px; font-size: 18px; font-family: 'UniversLTStd-Light', sans-serif;
+}
+
+.teachers-title,
+.read-more {
+  color: #333; /* Adjust this to your default color */
+  transition: all 0.3s ease-in-out;
+}
 .line {
   flex: 0 0 auto;
   height: 1px;
   background-color: #333;
-  margin: 40px 40px 0 40px;
+  margin: 0px 40px 0 40px;
 }
 
 .second-block-cell {
@@ -248,10 +346,10 @@ main {
 .cursor	i {
   position: absolute;
   width: 1px;
-  height: 14px;
+  height: calc(100% - 32px);
   background-color: gray;
   left: 12px;
-  top: 5px;
+  top: 16px;
   animation-name: blink;
   animation-duration: 1000ms;
   animation-iteration-count: infinite;
@@ -262,11 +360,18 @@ main {
 	display: none;
 }
 
-.iframe-tumblr {
-  position: absolute;
-  top: 0px;
-  z-index: -1;
-  margin-top: 100vh;
+@keyframes blinkBackground {
+    0%, 100% {
+        background-color: initial; /* Original color */
+    }
+    50% {
+        background-color: #333; /* Blink color */
+    }
+}
+
+/* Apply the animation when the input field is focused */
+.newsletter-input:focus {
+    animation: blinkBackground 0.3s ease-in-out;
 }
 
 .shrink {
@@ -279,14 +384,135 @@ main {
 }
 
 footer {
-  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   font-size: 9px;
-  color: #333;
-  padding: 15px 0px 15px 0px;
-  margin: 0 40px;
+  color: #efefea;
+  background-color: #202020;
+  padding: 40px;
   text-align: right;
   box-sizing: border-box;
   border-top: 1px solid #333;
+  font-size: 16px;
+  line-height: 150%;
+  font-family: 'UniversLTStd-Light', sans-serif;
+  text-align: left;
+  align-items: baseline;
+  column-gap: 30px;
+}
+
+.footer-link-list {
+  text-align: left;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link-list a {
+  color: #efefea;
+}
+
+.footer-link-list a:hover {
+  color: grey;
+}
+
+footer .newsletter-input {
+  color: #efefea;
+  background-color: transparent;
+  border-bottom: 1px solid #efefea;
+  border-radius: 0px;
+  font-size: 14px;
+  padding: 2px 0px;
+  margin: 0px;
+  transition: all 0.3s ease;
+}
+
+footer .newsletter-input::placeholder {
+    color: #efefea;
+    font-size: 14px;
+    opacity: 1;
+}
+
+footer .newsletter-input:hover::placeholder {
+  color: grey;
+  transition: all .3 ease;
+}
+
+footer .newsletter-input::-webkit-input-placeholder {
+    color: #efefea;
+    opacity: 1;
+    transition: all .3 ease;
+}
+
+/* Firefox 19+ */
+footer .newsletter-input::-moz-placeholder {
+    color: #efefea;
+    opacity: 1;
+}
+
+/* Internet Explorer 10-11 */
+footer .newsletter-input:-ms-input-placeholder {
+  color: #efefea;
+    opacity: 1;
+}
+
+/* Firefox 4-18 */
+footer .newsletter-input:-moz-placeholder {
+    color: #efefea;
+    opacity: 1;
+}
+
+footer .newsletter-input:focus {
+  background-color: initial;
+  animation: none;
+}
+
+footer .newsletter-submit, footer input[type="button"],footer input[type="submit"],footer input[type="reset"] {
+  border: none;
+  border-bottom: 1px solid #efefea;
+  color: #efefea;
+  background-color: transparent;
+  border-radius: 0px;
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+}
+
+footer .newsletter-submit:hover, footer .newsletter-submit:active {
+  border: inherit;
+  background-color: initial;
+  color: grey;
+  border-bottom: 1px solid #efefea;
+}
+
+.footer-newsletter-title {
+  font-family: 'UniversLTStd', sans-serif;
+  grid-column: 8;
+}
+
+.footer-newsletter-wrapper {
+  font-size: 14px;
+  grid-column: span 4;
+  line-height: 150%;
+  padding-bottom: 40px;
+}
+
+footer #mc_embed_signup {
+  height: 100%; grid-column: span 3; padding-top: 20px;
+}
+
+footer #mc_embed_signup_scroll {
+  display: grid; grid-template-columns: repeat(3, 1fr); height: 100%;
+}
+
+footer .mc-field-group {
+  grid-column: 1 / span 2; grid-row: 1; height: 100%;
+}
+
+.footer-endings {
+  grid-column: 9 / span 4;
+  text-align: right;
 }
 
 .hide {
@@ -311,7 +537,84 @@ footer {
 	to { opacity: 0; }
 }
 
+/* Overlay styling */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 999;
+    pointer-events: none; /* Prevent clicks when overlay is hidden */
+}
+
+/* Active state for overlay */
+#popup-overlay.active {
+    opacity: 1;
+    pointer-events: all; /* Allow clicks when overlay is visible */
+}
+
+/* Popup styling */
+#popup {
+    position: fixed;
+    left: 0;
+    bottom: -100vh; /* Start off-screen below */
+    width: 100%;
+
+    background-color: #fff;
+    transition: bottom 0.5s ease;
+    z-index: 1000;
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+#popup.active {
+    bottom: 0; /* Slide up into view */
+}
+
+/* Close button styling */
+#close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Optional: Style the form inside the popup */
+#popup form {
+    margin-top: 20px;
+}
+
+#popup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#popup button[type="submit"] {
+    padding: 10px 20px;
+}
+
 @media (max-width: 800px) {
+  footer {
+    font-size: 14px;
+  }
+  .main-text-secondary {
+    font-size: 19px;
+  }
+  .first-block {
+     height: 50vh;
+   }
+  .top-container {
+    height: 100%;
+  }
   .second-block-cell {
     grid-column: span 3;
     padding: 0 40px;
@@ -331,44 +634,46 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .third-block {
+    padding: 0 24px;
+  }
+  .teachers-grid {
+    row-gap: 24px;
+    padding: 24px;
+  }
+  .teachers-grid-cell {
+    grid-column: span 2;
+  }
   .second-block {
-    margin-top: 0px;
+    padding: 0 24px;
   }
   .cursor	i {
     height: 16px;
     left: 12px;
     top: 12px;
   }
-
   .newsletter-submit, input[type=button], input[type=submit], input[type=reset] {
+    height: 100%;
     width: 100%;
-    padding: 11px 16px 9px;
-    border-radius: 34px;
-    color: #fff;
     font-family: 'Univers LT Std', Helvetica, sans-serif;
-    max-width: 200px;
-     -webkit-appearance: none;
-     appearance: none;
-     font-weight: 400;
+    -webkit-appearance: none;
+    appearance: none;
+    font-weight: 400;
   }
-
   .newsletter-input {
-    height: 40px;
+    height: 100%;
     width: 100%;
   }
-
   .link {
     width: 100%;
     padding: 11px 16px 9px;
     border-radius: 34px;
     max-width: 200px;
   }
-
   .second-block-cell-inner {
     font-size: 11px;
     line-height: 19px;
   }
-
   .dasswerke-logo {
     width: 100px;
   }
@@ -378,11 +683,11 @@ footer {
     max-width: 90%;
   }
   .heading {
-    padding: 36px 24px 24px 24px;
+    padding: 2vh 24px 2vh 24px;
     height: 10vh;
   }
   .first-block {
-    padding: 36px 24px 80px 24px;
+    padding: 2vh 24px 2vh 24px;
   }
   .numbers {
     font-size: 20px;
@@ -394,6 +699,44 @@ footer {
     margin: 0 24px;
   }
   footer {
-    margin: 0px 24px 0 24px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 40px 24px;
+    row-gap: 20px;
+  }
+  .footer-newsletter-title {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .footer-newsletter-wrapper {
+    grid-row: 2;
+    grid-column: span 2;
+    padding-bottom: 10px;
+  }
+  footer .newsletter-input {
+    font-size: 13px;
+  }
+  footer .newsletter-input::placeholder {
+    font-size: 13px;
+  }
+  footer .newsletter-submit, footer input[type=button], footer input[type=submit], footer input[type=reset] {
+    font-size: 13px;
+  }
+  footer #mc_embed_signup {
+    grid-column: span 3;
+  }
+  footer #mc_embed_signup_scroll {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  footer .mc-field-group {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  .footer-endings {
+    grid-row: 3;
+    grid-column: 2 / span 2;
+    text-align: left;
+    font-size: 10px;
+    color: grey;
   }
 }
