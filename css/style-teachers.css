@@ -75,7 +75,6 @@ p:first-of-type {
 }
 .swiper {
   position: relative;
-  height: auto;
 }
 .swiper-slide {
   display: flex;
@@ -103,6 +102,13 @@ p:first-of-type {
   color: grey;
 }
   @media (max-width: 900px) {
+    .big-img .caption {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .caption {
+      font-size: 7px;
+    }
     .big-img {
       padding: 40px 10px;
     }
