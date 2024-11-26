@@ -22,7 +22,6 @@ input[type="text"],
 input[type="email"],
 button {
   margin: 0;
-  padding: 0;
   border: none;
   color: inherit;
   vertical-align: baseline;
@@ -215,7 +214,7 @@ main {
   grid-template-rows: auto 1fr;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  margin: 2vh 0 2.1vh;
+  margin: 2vh 0 4.1vh;
   row-gap: 2vh;
   column-gap: 10px;
   box-sizing: border-box;
