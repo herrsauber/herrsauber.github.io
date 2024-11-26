@@ -173,7 +173,7 @@ main {
     border-radius: 14px;
     outline: none;
     width: 100%;
-    line-height: 22px;
+    line-height: 150%;
     font-size: 4vh;
 }
 
