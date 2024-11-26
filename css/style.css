@@ -18,6 +18,18 @@
 
 textarea, select, input, button { outline: none; }
 
+input[type="text"],
+input[type="email"],
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+}
+
 @import url('https://fonts.cdnfonts.com/css/univers-lt-std');
 
 @font-face {
@@ -477,6 +489,7 @@ footer .newsletter-submit, footer input[type="button"],footer input[type="submit
   padding: 0px;
   margin: 0px;
   font-size: 14px;
+  line-height: 150%;
 }
 
 footer .newsletter-submit:hover, footer .newsletter-submit:active {
